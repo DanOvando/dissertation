@@ -9,11 +9,11 @@ If you'd like to change the name of the bibliography to something else,
 delete "References" and replace it.
 -->
 
-# References {-}
+# Bibliography {-}
 <!--
 This manually sets the header for this unnumbered chapter.
 -->
-\markboth{References}{References}
+\markboth{Bibliography}{Bibliography}
 <!--
 To remove the indentation of the first entry.
 -->

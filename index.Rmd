@@ -1,80 +1,64 @@
 ---
 # UW thesis fields
-title: "Improving the Management of Marine Resources through Economics and Data Science"
+title: "Of Fish and Men: Using Human Behavior to Improve Marine Resource Management"
 author: "Daniel A. Ovando"
 year: "2018"
 month: "August"
-program: " Institute of Slowly and Painfully Working Out the Surprisingly Obvious"
-uc_campus: "Maximegalon University"
+program: "Bren School of Environmental Science and Management"
+uc_campus: "Santa Barbara"
 report: "Dissertation"
 degree: "Doctor of Philosphy"
 chair: "Professor Christopher Costello"
 signature1: "Professor Steven Gaines"
 signature2: "Professor Ray Hilborn"
 signature3: "Professor Olivier Deschenes"
-abstract: "The data say 'meh'"
-acknowledgments: "Thanks everyone!"
-dedication: "To Hobbes"
+abstract: "People around the world depend on the ocean for their livelihoods and cultural identity. Properly done, marine resource management can help communities balance their extractive needs with the importance of maintaining healthy ecosystems. But, limited data and understanding often inhibits our ability to effectively manage our interactions with the sea, threatening both food security and ecological integrity. My research uses simulation modeling and quantitative methods to demonstrate how integrating data and theories of human behavior with ecological information can improve our understanding and management of marine ecosystems. For my first project, I ask whether we can use satellite data on the behavior of fishermen to predict the abundance of fish, and find that the answer is “sometimes, but…”. My next line of research shows that the region-wide conservation and fishery effects of Marine Protected Areas may be smaller, more variable, and harder to detect than we thought, and demonstrate an empirical approach for estimating these regional MPA effects in the Channel Islands National Marine Sanctuary. Lastly, I present a novel approach for using local historic economic information, together with biological data, to improve the ability of communities to estimate the health of their fishery."
+acknowledgments: "Funding for this work (for which the author is extremely grateful) was provided by the Daniel and Dianne Vapnek Fisheries Management Fellowship, and the National Marine Fisheries Service Sea Grant Population and Ecosystem Dynamics Fellowship. Along with my dissertation committee, these projects benefited from specific support by my Sea Grant advisor Dr. Jason Cope, Dr. Jenn Caselle, Dr. Merril Rudd, Dr. Jim Thorson, Dr. Cody Szuwalski, Owen Liu, and Juan Mayorga. Huge thanks to the community at the Sustainable Fisheries Group for their support and help over the years."
+dedication: "To my family for their unwavering and enthusiastic support of an unconventional career, and to Dave Tanner, for teaching me the fun of chasing your limits"
 # End of UCSB thesis fields
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  huskydown::thesis_pdf:
+  gauchodown::thesis_pdf:
     latex_engine: xelatex
   # bookdown::gitbook: default
-  # huskydown::thesis_gitbook: default
-  # huskydown::thesis_word: default
-  # huskydown::thesis_epub: default
+  # gauchodown::thesis_gitbook: default
+  # gauchodown::thesis_word: default
+  # gauchodown::thesis_epub: default
 bibliography: bib/dissertation.bib
 # Download your specific bibliography database file and refer to it in the line above.
-csl: csl/apa.csl
+csl: csl/fish-and-fisheries.csl
 # Download your specific csl file and refer to it in the line above.
+link-citations: yes
 lot: true
 lof: true
+linkcolor: blue
+citecolor: blue
+urlcolor: blue
 #space_between_paragraphs: true
 # Delete the # at the beginning of the previous line if you'd like
 # to have a blank new line between each paragraph
-#header-includes:
-#- \usepackage{tikz}
 ---
 
-<!--
-Above is the YAML (YAML Ain't Markup Language) header that includes a lot of metadata used to produce the document.  Be careful with spacing in this header!
-
-If you'd like to include a comment that won't be produced in your resulting file enclose it in a block like this.
--->
-
-<!--
-If you receive a duplicate label error after knitting, make sure to delete the index.Rmd file and then knit again.
--->
-
 ```{r include_packages, include = FALSE}
-# This chunk ensures that the gauchodown package is
-# installed and loaded. This gauchodown package includes
-# the template files for the thesis.
-if(!require(devtools))
-  install.packages("devtools", repos = "http://cran.rstudio.com")
-if(!require(huskydown))
-  devtools::install_github("danovando/gauchodown")
+knitr::opts_chunk$set(message = F, warning = F, echo = F,cache = F)
 library(gauchodown)
+extrafont::loadfonts()
 ```
 
 <!-- The {.unnumbered} option here means that the introduction will be "Chapter 0." You can also use {-} for no numbers on chapters. -->
 
 # Introduction {.unnumbered}
 
-Welcome to the _R Markdown_ thesis template. This template is based on (and in many places copied directly from) the UW LaTeX template, but hopefully it will provide a nicer interface for those that have never used TeX or LaTeX before. Using _R Markdown_ will also allow you to easily keep track of your analyses in **R** chunks of code, with the resulting plots and output included as well. The hope is this _R Markdown_ template gets you in the habit of doing reproducible research, which benefits you long-term as a researcher, but also will greatly help anyone that is trying to reproduce or build onto your results down the road.
+My research uses modern data science tools to integrate economics and fisheries science to improve the management of natural marine resources. The research in this dissertation presents three broadly different projects all related by this common thread. Each of these chapters mixes data and theories of human economic behavior with fisheries science though quantitative methods, including machine learning and Bayesian inference, to demonstrate how integration of human behavior can (or cannot) help us understand and manage fisheries. 
 
-Hopefully, you won't have much of a learning period to go through and you will reap the benefits of a nicely formatted thesis. The use of LaTeX in combination with _Markdown_ is more consistent than the output of a word processor, much less prone to corruption or crashing, and the resulting file is smaller than a Word file. While you may have never had problems using Word in the past, your thesis is likely going to be at least twice as large and complex as anything you've written before, taxing Word's capabilities. After working with _Markdown_ and **R** together for a few weeks, we are confident this will be your reporting style of choice going forward.
+My first chapter asks, can we use fine-scale data on fishing effort to gain understanding of the abundance of fishes in space and time? To accomplish this, we pair novel data provided by Global Fishing Watch (described in @Kroodsma2018) detailing the date, location, and nature of large-scale fishing effort all around the globe with data from fishery independent research surveys to determine if the effort data can predict fish abundance. We find that while effort data can be used to predict fish abundance, environmental data such as water temperature can do the same thing better, and that models fitted to one location are not easily exportable to a new location. All materials needed to replicate this analysis can be found [here](https://github.com/DanOvando/skynet)
 
-<!--  If you're still on the fence about using _R Markdown_, check out the resource for newbies available at <https://ismayc.github.io/rbasics-book/> .  -->
+The second chapter turns to the use of Marine Protected Areas (MPAs) in providing conservation and fishery benefits. MPAs have a long history in marine resource management, and increasingly are looked to to provide benefits not only inside their borders but also to the waters surrounding them. There is a large amount of general theory addressing the question of when and how much we should expect MPAs to provide regional-scale conservation and fishery benefits, along with a broad literature of modeling designed to test a few theories at a time or support planning in a specific place. We created a simulation tool that integrates across the critical components of this literature to provide a new and comprehensive view of the expected regional-scale conservation and fishery impacts of MPAs. Our results demonstrate that even while controlling for critical drivers such as the size of the MPA network and the pre-MPA depletion of the fishery, the region-wide effects of MPAs are highly variable, and in many cases relatively small. We show that human behavior is one of the most critical drivers of the expected regional effects of MPAs. This has important implications for MPA monitoring programs. To demonstrate this, we pair the simulation analysis with an empirical assessment of the regional effects of a network of MPAs placed in the Channel Islands National Marine Sanctuary in 2003. Our results both present a strategy for estimating regional effects of MPAs in the real world, and match closely with the expectations generated by our simulation analysis. All materials needed to replicate this analysis can be found [here](https://github.com/DanOvando/zissou)
 
-**Why use it?**
+The third and final chapter integrates economic theory and data into the fisheries stock assessment process. Stock assessments are statistical models that estimate critical population parameters such as fishing mortality rates using data such as catch-per-unit-effort and/or the distribution of fish lengths observed in samples from fishery catches. We demonstrate how using economic data and theory such as open-access dynamics along with data on profit per unit effort, prices, cost, labor, and technology, can improve the ability of stock assessment models to provide accurate estimate of fishing mortality rates in a data-limited context. We also present a simulation testing tool for examining model performance and helping users decide which model to use under what circumstances. Our results both open a new field of data for stock assessment and improve the ability of local stakeholders to include their historic knowledge of a fishery's economic development into the assessment process. All materials needed to replicate this analysis can be found [here](https://github.com/DanOvando/scrooge)
 
-_R Markdown_ creates a simple and straightforward way to interface with the beauty of LaTeX.  Packages have been written in **R** to work directly with LaTeX to produce nicely formatting tables and paragraphs. In addition to creating a user friendly interface to LaTeX, _R Markdown_ also allows you to read in your data, to analyze it and to visualize it using **R** functions, and also to provide the documentation and commentary on the results of your project.  Further, it allows for **R** results to be passed inline to the commentary of your results.  You'll see more on this later.  
+This dissertation makes use of a number of computing packages without which the results would be much poorer and much delayed. All analyses were based in the R programming language [@RCoreTeam2018]. However, while data processing and plotting were in R, I also make extensive use of Stan [@Carpenter2017], interfaced with using the `rstan`, `rstanarm`, and `brms` packages, along with Template Model Builder [TMB, @Kristensen2016]. Code throughout the project makes extensive use of the [`tidyverse`](https://www.tidyverse.org/) suite of packages which made life exponentially easier (thank you `dplyr` and `ggplot2`!), and the `caret` package [@Kuhn2008] as an interface for machine learning tools. This dissertation was written in `bookdown`, adapted to match the UC Santa Barbara dissertation template through my package [`gauchodown`](https://github.com/DanOvando/gauchodown), which was made possible by numerous contributors but in particular the original work of [`thesisdown`](https://github.com/ismayc/thesisdown) and [`huskydown`](https://github.com/benmarwick/huskydown). The appearance of all plots are based on the excellent "opinionated" themes presented in [`hrbrthemes`](https://github.com/hrbrmstr/hrbrthemes). 
 
-<!--  Having your code and commentary all together in one place has a plethora of benefits! -->
 
-**Who should use it?**
 
-Anyone who needs to use data analysis, math, tables, a lot of figures, complex cross-references, or who just cares about the final appearance of their document should use _R Markdown_. Of particular use should be anyone in the sciences, but the user-friendly nature of _Markdown_ and its ability to keep track of and easily include figures, automatically generate a table of contents, index, references, table of figures, etc. should make it of great benefit to nearly anyone writing a thesis project.

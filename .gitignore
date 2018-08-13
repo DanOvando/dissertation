@@ -12,3 +12,4 @@ inst/rmarkdown/templates/thesis/skeleton/_bookdown_files/*
 *.pdf
 _book/
 _bookdown_files/
+*.html

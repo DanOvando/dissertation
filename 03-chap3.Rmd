@@ -1,1 +1,5 @@
-# Scrooge {#scrooge}
+# Improving Fisheries Stock Assessment by Integrating Economic Theory and Data {#scrooge}
+
+```{r scrooge, echo=FALSE,error=FALSE,message=FALSE,results='asis'}
+cat(knitr::knit_child("~/PhD/scrooge/documents/scrooge-paper.Rmd",quiet=TRUE))  
+```

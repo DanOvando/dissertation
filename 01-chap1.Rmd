@@ -1,5 +1,5 @@
-# Zissou {#zissou}
+# Estimating Fish Abundance from the Behavior of Fishing Fleets {#skynet}
 
-```{r zissou, echo=FALSE,error=FALSE,message=FALSE,results='asis'}
-cat(knitr::knit_child("~/PhD/zissou/documents/zissou-paper.Rmd",quiet=TRUE))  
+```{r skynet, echo=FALSE,error=FALSE,message=FALSE,results='asis'}
+cat(knitr::knit_child("~/PhD/skynet/documents/skynet-paper.Rmd",quiet=TRUE))  
 ```
