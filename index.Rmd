@@ -40,7 +40,6 @@ urlcolor: blue
 #space_between_paragraphs: true
 # Delete the # at the beginning of the previous line if you'd like
 # to have a blank new line between each paragraph
-output_dir: "docs"
 ---
 
 ```{r include_packages, include = FALSE}
