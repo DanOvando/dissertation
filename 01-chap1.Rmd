@@ -1,5 +1,5 @@
 # Estimating Fish Abundance from the Behavior of Fishing Fleets {#skynet}
 
 ```{r skynet, echo=FALSE,error=FALSE,message=FALSE,results='asis'}
-cat(knitr::knit_child("~/PhD/skynet/documents/skynet-paper.Rmd",quiet=TRUE))  
+# cat(knitr::knit_child("~/PhD/skynet/documents/skynet-paper.Rmd",quiet=TRUE))  
 ```
