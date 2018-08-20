@@ -226,7 +226,10 @@ Szuwalski, C.S., Castrejon, M., Ovando, D., Chasco, B., 2016. An integrated stoc
     %\abstractsignature
   \end{abstract}
 	\tableofcontents
-\end{ucfrontmatter}
+	  \listoftables
+  
+    \listoffigures
+  \end{ucfrontmatter}
 \begin{ucmainmatter}
 
 \chapter*{Introduction}\label{introduction}
@@ -4877,81 +4880,18 @@ A digital version of this dissertation can be found at
 \url{https://github.com/xx/xx}. A hard copy of the thesis can be found
 in the University of California Santa Barbara library.
 
-This version of the thesis was generated on 2018-08-18 19:52:22. The
+This version of the thesis was generated on 2018-08-18 20:41:44. The
 repository is currently at this commit:
 \begin{verbatim}
-Commit:  4f8478570c64dfa81306a8021bbbde69f6b18542
+Commit:  301dc8614b9e5bb0494ae001e86577bbde4c002b
 Author:  DanOvando <dovando@bren.ucsb.edu>
-When:    2018-08-18 18:32:44
+When:    2018-08-18 19:54:02
 
-     full draft published to pages
+     testing push for pdf
      
-65 files changed, 1732 insertions, 189 deletions
-02-chap2.Rmd                                          | -  1 +  1  in  1 hunk
-03-chap3.Rmd                                          | -  1 +  1  in  1 hunk
-docs/1-skynet.html                                    | -  2 + 39  in  1 hunk
-docs/2-zissou.html                                    | -  2 +576  in  2 hunks
-docs/3-scrooge.html                                   | -  2 +530  in  2 hunks
-docs/bibliography.html                                | -  2 +249  in  8 hunks
-docs/colophon.html                                    | -174 +294  in 16 hunks
-docs/index.html                                       | -  2 + 39  in  1 hunk
-docs/search_index.json                                | -  3 +  3  in  1 hunk
-docs/thesis_files/figure-html/basic-plot-1.png        | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/best-models-plot-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/binary-dtree-1.png      | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/bio-mpa-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/catch-effects-1.png     | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/catch-msy-effects-1.png | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/chr-sims-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/ci-map-1.png            | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/cross-map-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/cs-trends-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/cs1-1.png               | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/cs2-1.png               | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/cs3-1.png               | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/d-and-tree-1.png        | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/did-plot-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/div-mpa-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/dtree-1.png             | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/ebs-cpue-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/embed-plot-1.png        | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/energy-1.png            | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/ex-mpa-1.png            | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/f-and-s-plot-1.png      | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/fe-plot-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/fleet-plot-1.png        | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/kfm-did-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/lcomp-pp-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/lcomps-1.png            | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/mean-div-mpa-1.png      | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/mean-length-1.png       | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/mpa-did-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/neff-rhat-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/neg-tree-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/nozero-raw-trend-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/num-sims-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/numeric-cor-1.png       | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/obs-plot-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/obs-v-pred-1.png        | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/pop-f-and-s-plot-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/pop-trend-effect-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/ppue-hat-1.png          | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/ppue-pp-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/raw-trend-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/raw-v-stand-plot-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/reg-pop-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/scrooge-v-lime-1.png    | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/sim-tests-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/site-plot-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/targ-plot-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/temp-plot-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/tree-plot-1.png         | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/trend-effect-1.png      | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/trophic-plot-1.png      | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/unnamed-chunk-15-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/unnamed-chunk-20-1.png  | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/wc-cpue-1.png           | -  0 +  0  in  0 hunk (binary file)
-docs/thesis_files/figure-html/which-chosen-1-1.png    | -  0 +  0  in  0 hunk (binary file)
+2 files changed, 6028 insertions, 3 deletions
+docs/thesis.tex | -0 +6025  in 1 hunk
+index.Rmd       | -3 +   3  in 1 hunk
 \end{verbatim}
 The computational environment that was used to generate this version is
 as follows:

@@ -9,6 +9,5 @@
 inst/rmarkdown/templates/thesis/skeleton/_book/*
 inst/rmarkdown/templates/thesis/skeleton/_bookdown_files/*
 *.Rproj
-*.pdf
 _book/
 _bookdown_files/

@@ -1,5 +1,5 @@
 # Predicting and Detecting the Regional-Scale Conservation and Fishery Impacts of Marine Protected Areas {#zissou}
 
 ```{r zissou, echo=FALSE,error=FALSE,message=FALSE,results='asis'}
- cat(knitr::knit_child("~/PhD/zissou/documents/zissou-paper.Rmd",quiet=TRUE))  
+cat(knitr::knit_child("~/PhD/zissou/documents/zissou-paper.Rmd",quiet=TRUE))  
 ```

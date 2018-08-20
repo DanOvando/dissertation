@@ -750,6 +750,7 @@
    {\ssp\@starttoc{lof}}\if@restonecol
     \twocolumn\fi}
 
+
 \def\l@figure{\@dottedtocline{1}{1.5em}{2.3em}}
 
 % LIST OF TABLES
@@ -757,7 +758,8 @@
 \def\listoftables{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
   \chapter*{\listtablename\@mkboth{\uppercase{\listtablename}}%
-   {\uppercase{\listtablename}}}\@starttoc{lot}\if@restonecol
+   {\uppercase{\listtablename}}}
+   \@starttoc{lot}\if@restonecol
   \twocolumn\fi}
 \def\listoftables{\@restonecolfalse
   \if@twocolumn\@restonecoltrue\onecolumn\fi
