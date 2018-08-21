@@ -21,10 +21,10 @@ dedication: "To my family for their unwavering and enthusiastic support of an un
 knit: "bookdown::render_book"
 site: bookdown::bookdown_site
 output: 
-  gauchodown::thesis_pdf:
-    latex_engine: xelatex
+  # gauchodown::thesis_pdf:
+  #   latex_engine: xelatex
   # bookdown::pdf_book: default
-  # bookdown::gitbook: default
+  bookdown::gitbook: default
   # gauchodown::thesis_gitbook: default
   # gauchodown::thesis_word: default
   # gauchodown::thesis_epub: default
